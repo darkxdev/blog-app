@@ -7,11 +7,11 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5)
   end
 
-  def increment_comment_counter
-    update(comments_counter: comments_counter + 1)
-  end
+  after_save :increment_post_counter
 
-  def increment_like_counter
-    update(likes_counter: likes_counter + 1)
+  private
+
+  def increment_post_counter
+    update(post_counter: post_counter + 1)
   end
 end

@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: rails
+  database: blog
   username: postgres
   password: database
   hostname: localhost

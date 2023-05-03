@@ -20,18 +20,19 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [Catalog of my Things] <a name="about-project"></a>
+# 📖 [Blog App] <a name="about-project"></a>
 
-**[Catalog of my Things]** is a project created to manage and display entries in a library using Object Oriented Programming with Ruby.
+**[Blog App]** is a project created to manage and display entries in a library using Object Oriented Programming with Ruby.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-<summary>The 'Catalog of my Things' app was built using Ruby</summary>
+<summary>The 'Blog App' app was built using Ruby, and PostgreSQL</summary>
   <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li>PostgreSQL</li>
   </ul>
 </details>
 
@@ -39,8 +40,9 @@
 
 - Add different types of entries
 - Organize them into a collection
-- Preseve and load data into json files on app start/exit
+- Preseve and load data
 - List and display the different categories
+- PostgreSQL
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -48,7 +50,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Check our Video Presentation for this project [here:](https://drive.google.com/file/d/15OfjSKSGR5Jp-SEMfv5aCM3gF6SrRL-F/view?usp=share_link)
+Check our Video Presentation for this project here: (Under Development)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,9 +71,9 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/DarkxDev/catalog-of-my-things
+git clone https://github.com/DarkxDev/blog-app
 
-cd catalog-of-my-things
+cd blog-app
 ```
 
 ### Install <a name="install">
@@ -92,12 +94,6 @@ rspec spec
 
 ## 👤 Author <a name="authors"></a>
 
-**Dennis Every**
-
-- GitHub: [@dennis-every](https://github.com/dennis-every)
-- Twitter: [@dennis_every](https://twitter.com/dennis_every)
-- LinkedIn: [dennis-every](https://www.linkedin.com/in/dennis-every/)
-
 **Bryan Hurtado**
 
 - GitHub: [@DarkxDev](https://github.com/DarkxDev)
@@ -116,7 +112,7 @@ rspec spec
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/DarkxDev/catalog-of-my-things/issues).
+Feel free to check the [issues page](https://github.com/DarkxDev/blog-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

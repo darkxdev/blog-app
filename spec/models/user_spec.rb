@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe User, type: :model do
-
   # Validations
   it 'Should have a name' do
     user = User.new(name: nil)

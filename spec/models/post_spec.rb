@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe Post, type: :model do
-
   # Validations
   describe 'Title' do
     it 'Should not be blank' do

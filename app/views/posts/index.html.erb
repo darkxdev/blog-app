@@ -2,7 +2,9 @@
 
 <% @posts.each do |post| %>
   <%= render 'shared/post_card', post: post %>
-  <% post.recent_comments.each do |comment| %>
-    <%= render 'shared/comments_card', comment: comment %>
-  <% end %>
+  <div class="comments-box">
+    <% post.recent_comments.each do |comment| %>
+      <%= render 'shared/comments_card', comment: comment %>
+    <% end %>
+  </div>
 <% end %>

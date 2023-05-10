@@ -1,8 +1,8 @@
-<html>
-  <head>
-    <title>Post</title>
-  </head>
-  <body>
-    <h1>Here is a specific POST</h1>
-  </body>
-</html>
+<p>Post #<%= @post.id %> by <%= @post.author.name%></p>
+<p>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+
+<p><%= @post.text %></p>
+
+<% @post.recent_comments.each do |comment| %>
+  <%= render 'shared/comments_card', comment: comment %>
+<% end %>

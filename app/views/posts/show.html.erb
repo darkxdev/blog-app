@@ -11,3 +11,5 @@
     <%= render 'shared/comments_card', comment: comment %>
   <% end %>
 </div>
+
+<%= render 'shared/comments_form', current_user: @current_user, post: @post %>

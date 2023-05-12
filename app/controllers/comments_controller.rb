@@ -5,11 +5,11 @@ class CommentsController < ApplicationController
     @current_user = current_user
     @comment = @post.comments.new(comment_params)
     @comment.author = current_user
-    
+
     if @comment.save
       redirect_to post_comments_path(@current_user.id, @post.id), notice: 'Comment posted.'
     else
-      render "posts/show"
+      render 'posts/show'
     end
   end
 

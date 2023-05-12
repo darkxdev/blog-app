@@ -13,13 +13,13 @@ class PostsController < ApplicationController
     @current_user = current_user
     @post = @current_user.posts.new
   end
-  
+
   def create
     @current_user = current_user
     @post = @current_user.posts.new(post_params)
-  
+
     if @post.save
-      redirect_to user_posts_path(@current_user), notice: "Post created successfully."
+      redirect_to user_posts_path(@current_user), notice: 'Post created successfully.'
     else
       render :new
     end

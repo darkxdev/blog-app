@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get '/users/:id/posts/:post_id', to: 'posts#show', as: 'post_comments'
 
   post '/users/:id/posts/:post_id/create', to: 'comments#create', as: 'post_comments_create'
+  post '/users/:id/posts/:post_id/like', to: 'likes#create', as: 'post_likes_create'
 
 end

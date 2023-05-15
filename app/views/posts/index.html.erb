@@ -7,7 +7,7 @@
 <% @posts.each do |post| %>
   <%= render 'shared/post_card', post: post %>
   <div class="comments-box">
-    <% post.recent_comments.each do |comment| %>
+    <% post.comments.each do |comment| %>
       <%= render 'shared/comments_card', comment: comment %>
     <% end %>
   </div>

@@ -34,6 +34,10 @@ RSpec.describe 'Users Show', type: :feature do
     expect(page).to have_content('Test post 4')
   end
 
+  it "displays a button that lets me view all of a user's posts." do
+    expect(page).to have_content('See all posts')
+  end
+
   it "redirects to the post's show page when clicking a user's post" do
     first_post = user.posts.first
     click_link "Post ##{first_post.id}"

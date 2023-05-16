@@ -1,8 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :feature do
+RSpec.describe "Users Index", type: :feature do
   before do
-    # Create some users for testing
     @user1 = User.create(name: "User 1", post_counter: 3)
     @user2 = User.create(name: "User 2", post_counter: 5)
 

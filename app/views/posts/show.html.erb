@@ -4,6 +4,9 @@
     <p>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
   </div>
   <p class="post-text"><%= @post.text %></p>
+  <% if can? :destroy, @post %>
+  <%= button_to 'Delete Post', delete_post_path(current_user.id, @post.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 </div>
 
 <div class="comments-box">
@@ -11,9 +14,6 @@
     <%= render 'shared/comments_card', comment: comment %>
   <% end %>
 </div>
-
-<%= notice %>
-<%= alert %>
 
 <%= form_with(model: @like, url: post_likes_create_path(current_user.id, @post.id), method: :post) do |form| %>
   <%= form.hidden_field :author_id, value: current_user.id %>

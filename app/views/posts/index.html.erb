@@ -1,9 +1,5 @@
 <%= render 'shared/user_header', user: @user %>
 
-<% if notice %>
-  <div class="notice-post"><%= notice %></div>
-<% end %>
-
 <% @posts.each do |post| %>
   <%= render 'shared/post_card', post: post %>
   <div class="comments-box">
@@ -14,5 +10,5 @@
 <% end %>
 
 <section class="pagination-section">
-  Section for Pagination.
+  Section for pagination.
 </section>

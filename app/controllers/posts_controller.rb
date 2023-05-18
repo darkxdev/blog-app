@@ -25,6 +25,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:post_id])
+    authorize! :destroy, @post
+
+    @post.destroy
+    redirect_to user_posts_path(@current_user), notice: 'Post deleted successfully.'
+  end
+
   private
 
   def post_params

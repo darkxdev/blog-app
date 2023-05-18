@@ -11,7 +11,11 @@
   </head>
 
   <body>
-  <%= button_to "logout", destroy_user_session_path, method: :delete, class: 'btn-logout'  %>
+    <%= button_to "logout", destroy_user_session_path, method: :delete, class: 'btn-logout'  %>
+    <p class="flashes">
+      <%= notice %>
+      <%= alert %>
+    </p>
     <%= yield %>
   </body>
 </html>

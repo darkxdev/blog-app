@@ -20,6 +20,6 @@ Rails.application.routes.draw do
 
   # API Endpoints
   get '/users/:id/posts.json', to: 'posts#index'
-  get '/users/:id/posts/:post_id/comments.json', to: 'comments#render_json', as: 'comments'
-  post '/users/:id/posts/:post_id/new_comment.json', to: 'comments#create'
+  get '/users/:id/posts/:post_id/comments.json', to: 'comments#render_json'
+  post '/api/posts/:post_id/new_comment.json', to: 'api/comments#create'
 end

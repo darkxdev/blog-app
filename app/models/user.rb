@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  before_create :set_user_token
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -12,5 +14,11 @@ class User < ApplicationRecord
 
   def last_three_posts
     Post.where(author_id: id).last(3)
+  end
+
+  private
+
+  def set_user_token
+    self.author_token = SecureRandom.hex(20)
   end
 end

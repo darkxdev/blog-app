@@ -19,6 +19,6 @@ class User < ApplicationRecord
   private
 
   def set_user_token
-    self.author_token = SecureRandom.hex(20)
+    self.token = SecureRandom.hex(20)
   end
 end

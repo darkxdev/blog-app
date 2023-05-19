@@ -12,7 +12,7 @@
 <div class="comments-box">
   <% @post.recent_comments.each do |comment| %>
     <%= render 'shared/comments_card', comment: comment %>
-    <% if can? :destroy, @comment %>
+    <% if can? :destroy, comment %>
       <%= button_to 'Delete Comment', delete_comment_path(current_user.id, @post.id, comment.id), method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
   <% end %>

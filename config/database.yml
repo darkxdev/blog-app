@@ -24,8 +24,8 @@ default: &default
 development:
   <<: *default
   database: blog
-  username: 
-  password: 
+  username: postgres
+  password: database
   hostname: localhost
   port: 5432
 

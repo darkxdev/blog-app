@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  root 'users#index'
-
   get '/users', to: 'users#index'
   get '/users/:id', to: 'users#show', as: 'user'
   get '/users/:id/posts', to: 'posts#index', as: 'user_posts'
@@ -19,4 +17,9 @@ Rails.application.routes.draw do
 
   delete '/users/:id/posts/:post_id/destroy', to: 'posts#destroy', as: 'delete_post'
   delete '/users/:id/posts/:post_id/:comment_id', to: 'comments#destroy', as: 'delete_comment'
+
+  # API Endpoints
+  get '/users/:id/posts.json', to: 'posts#index'
+  get '/users/:id/posts/:post_id/comments.json', to: 'comments#render_json'
+  post '/api/posts/:post_id/new_comment.json', to: 'api/comments#create'
 end
